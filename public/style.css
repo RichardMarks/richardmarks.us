@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Oswald&display=swap');
+
+:root {
+  --theme-bg: #fff;
+  --theme-alt-bg: #fff;
+  --theme-text: #369;
+  --theme-primary-font: 'Lato', sans-serif;
+  --theme-secondary-font: 'Oswald', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--theme-primary-font);
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--theme-secondary-font);
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  width: 100%;
+}
+
+section:nth-child(odd) {
+  background-color: var(--theme-alt-bg);
+}
+
+section > *:not(.section-header) {
+  max-width: 90vw;
+  margin: auto;
+}
+
+/* Header */
+
+.header {
+  min-height: 100vh;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: url('https://images.pexels.com/photos/210517/pexels-photo-210517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.header .logo {
+  background: url('logo128.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 128px;
+  height: 128px;
+  margin-top: 24px;
+}
+
+.header .hero {
+  font-size: 3.0em;
+  line-height: 1;
+  color: white;
+  text-shadow: 0 0 6px #000;
+}
+
+.header .intro {
+  color: white;
+  text-shadow: 0 0 6px #000;
+  font-size: 1.5em;
+  padding: 0em 1em;
+}
+
+.header .learn-more-button {
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 200px;
+  padding: 1em 2em;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  transition: all 0.5s ease;
+  margin-bottom: 2em;
+}
+
+.header .learn-more-button::after {
+  content: '';
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  width: 24px;
+  height: 4px;
+  transform: translate(-8px, 36px) rotate(45deg);
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.5s ease;
+}
+
+.header .learn-more-button::before {
+  content: '';
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  width: 24px;
+  height: 4px;
+  transform: translate(8px, 36px) rotate(-45deg);
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.5s ease;
+}
+
+.header .learn-more-button:hover {
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 4px #fff;
+  transform: scale(1.05);
+}
+
+.header .learn-more-button:hover::after {
+  content: '';
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  width: 24px;
+  height: 4px;
+  transform: translate(-8px, 36px) rotate(45deg);
+  box-shadow: 0 0 4px #fff;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.header .learn-more-button:hover::before {
+  content: '';
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  width: 24px;
+  height: 4px;
+  transform: translate(8px, 36px) rotate(-45deg);
+  box-shadow: 0 0 4px #fff;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.section-header {
+  background-color: var(--theme-text);
+  color: var(--theme-bg);
+  padding: 0.25em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Front Matter */
+.front-matter {
+  /* padding: 1em; */
+}
+
+.current-role {
+  padding: 0.5em;
+  text-align: center;
+  font-size: 2em;
+  /* background-color: var(--theme-alt-bg); */
+}
+
+.contact-information {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5em;
+  flex-direction: column-reverse;
+  line-height: 1.5em;
+}
+
+.professional-summary {
+  text-align: center;
+  padding: 1em;
+  font-size: 1.25em;
+}
+
+/* Skills */
+.skills .skills-list {
+  text-align: center;
+  padding: 1em;
+}
+
+.skills-list-item {
+  margin-bottom: 0.5em;
+}
+
+/* Work History */
+
+.work-history {
+  /* padding: 1em; */
+}
+
+.work-history .section-header {
+  text-align: center;
+}
+
+.work-history .jobs-list-item_job-title {
+  text-align: center;
+}
+
+.work-history .jobs-list-item_company-name {
+  text-align: center;
+}
+
+.jobs-list-item {
+  padding: 1em;
+  margin-bottom: 2em;
+}
+
+.jobs-list-item:nth-child(even) {
+}
+
+.jobs-list-item:last-of-type {
+  margin-bottom: 0;
+}
+
+.jobs-list-item_date {
+  text-align: center;
+}
+
+.job-detail-list {
+  margin-top: 1em;
+}
+
+.job-detail-list-item {
+  margin-bottom: 0.5em;
+  list-style: square;
+  margin-left: 1em;
+}
+
+.job-detail-list-item {
+  padding-bottom: 1em;
+/*   border-bottom: 1px solid #bbb; */
+}
+
+.about .story {
+  padding: 1em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.about .story:nth-of-type(1)::first-letter {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.the-end {
+  text-align: center;
+  padding: 1em;
+  background-color: var(--theme-text);
+  color: var(--theme-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 9vh;
+}
+
+.the-end .logo {
+  background: url('logo128.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 96px;
+  height: 96px;
+}
+
+.the-end .copyright {
+  /* font-size: 1.2em; */
+}
+
+.the-end .jump {
+  text-decoration: none;
+  color: var(--theme-text);
+  background-color: var(--theme-bg);
+  padding: 1em 2em;
+  min-height: 48px;
+  max-height: 48px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+/* desktop */
+
+@media screen and (min-width: 700px) {
+  .contact-information {
+    line-height: normal;
+    flex-direction: row;
+  }
+
+  .the-end {
+    flex-direction: row;
+  }
+
+  .the-end .logo {
+    order: -1;
+  }
+
+  .the-end .copyright {
+    order: -1;
+  }
+
+  .about .story {
+    max-width: 80vw;
+    line-height: 1.5;
+    margin: auto;
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "richardmarks.us",
+  "version": "1.0.0",
+  "description": "Agile multi-disciplined senior developer with 10 years experience specializing in frontend architecture and games achieving high client satisfaction. A purpose-driven professional active in engaging, training and mentoring others.",
+  "main": "index.js",
+  "author": "Richard Marks <contact@richardmarks.us>",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "postcss": "^7.0.32"
+  },
+  "scripts":{
+    "build": "yarn run copy && yarn run css",
+    "copy": "mkdir -p dist && cp public/* dist/",
+    "css": "postcss --use autoprefixer -o dist/style.css public/*.css"
+  }
+}
